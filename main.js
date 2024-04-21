@@ -15,8 +15,9 @@ function toggleMobileMenu() {
     });
 } 
 
+/* 
 toggleMobileMenu();
- 
+  */
 /* ------ About us ------ */
 
 function animateDash() {
