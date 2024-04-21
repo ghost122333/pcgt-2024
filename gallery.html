@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCGT</title>
 
+    <link rel="stylesheet" href="fancybox.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header-section">
         <div class="notice">
-            <div class="notice-text">Az oldal tartalma csak tanulási és prezentáció céljából jött létre. Nem tartalmaz valós adatot.</div>
+            <div class="notice-text">Az oldal tartalma csak tanulás és prezentáció céljából jött létre. Nem tartalmaz valós adatot.</div>
         </div>
         <div class="header-content-wrapper responsive-container">
             <div class="header-logo-wrapper">
@@ -33,6 +34,54 @@
             <div class="hero-text">Galéria</div>
         </div>
         <div class="hero-nav-container"></div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="responsive-container gallery-content-container">
+
+            <div class="gallery-img-wrapper">
+                <a href="office-img.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="office-img.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="close-up-hands-working-project.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="close-up-hands-working-project.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="laptop.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="laptop.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="service-gt-1.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="service-gt-1.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="service-repair-0.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="service-repair-0.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="srvc1.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="srvc1.jpg" class="gallery-img">
+                </a>
+            </div>
+
+            <div class="gallery-img-wrapper">
+                <a href="service-repair-1.jpg" data-fancybox="gallery" class="gallery-img-link">
+                    <img src="service-repair-1.jpg" class="gallery-img">
+                </a>
+            </div>
+
+        </div>
     </section>
 
     <footer class="footer-section">
@@ -61,7 +110,12 @@
         </div>
     </footer>
 
-
+    <script src="fancybox.umd.js"></script>
     <script src="main.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+        });
+    </script>
 </body>
 </html>

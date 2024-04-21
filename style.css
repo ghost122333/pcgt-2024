@@ -297,6 +297,7 @@ strong {
 
 .introduction-svg-bg-bottom {
     margin-top: -4%;
+    margin-bottom: -6%;
 }
 
 .introduction-content-wrapper {
@@ -668,6 +669,46 @@ strong {
     display: flex;
     flex-wrap: wrap;
     max-width: 60%;
+    justify-content: space-between;
+}
+
+.service-title {
+    color: var(--darkBlue);
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.service-text {
+    color: var(--darkB);
+    margin-bottom: 30px;
+}
+
+.service-nav-list {
+    background-color: var(--fffWhite);
+    border-radius: 5px;
+    border: 2px solid var(--darkB);
+    color: var(--blck);
+}
+
+.service-nav-listitem-label {
+    border: 1px solid var(--darkB);
+    border-collapse: collapse;
+    padding: 10px 20px;
+}
+
+.service-nav-listitem + label {
+    background-color: transparent;
+    transition: 0.6s;
+}
+
+.service-nav-listitem:checked + label {
+    background-color: var(--blueishWhite);
+    transition: 0.6s;
+}
+
+.service-nav-list label {
+    width: 100%
 }
 
 .service-img-wrapper {
@@ -675,5 +716,184 @@ strong {
 }
 
 .service-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ------ Gallery ------ */
+
+.gallery-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-img-wrapper {
+    margin: 20px;
+}
+
+.gallery-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+}
+
+.gallery-img-wrapper {
+    position: relative;
+    transition: 0.6s;
+}
+
+.gallery-img-wrapper:hover {
+    scale: 1.1;
+    transition: 0.6s;
+}
+
+.gallery-img-wrapper:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0 0 0 / 20%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ------ Contact ------ */
+
+.contact-container {
+    background-color: var(--fffWhite);
+/*     border-radius: 10px;
+ */    padding: 20px 40px;
+    border: 2px solid var(--vBlue);
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+.contact-block {
+    max-width: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.contact-block label {
+    width: 100%;
+    font-size: 25px;
+    color: var(--darkB);
+}
+
+.contact-block:last-child {
+    width: 100%;
     max-width: 100%;
+    justify-content: center;
+}
+
+.contact-input {
+    width: 50%;
+    padding: 10px 25px;
+    border: 2px solid var(--darkBlue);
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--blueishWhite);
+    font-size: 20px;
+}
+
+#input-textarea-id {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+.sbmt-btn {
+    padding: 20px 35px;
+    color: var(--fffWhite);
+    background-color: var(--darkBlue);
+    font-weight: 700;
+    font-size: 25px;
+    border: 0;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.sbmt-btn:active {
+    background-color: var(--darkerBlue);
+    color: var(--blueishWhite);
+    transition: 0.2s;
+}
+
+/* Index contact */
+
+.index-contact-section {
+    margin-bottom: 30px;
+}
+
+.index-contact-section .responsive-container {
+    border-radius: 15px;
+}
+
+.index-contact-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: var(--darkB);
+    text-align: center;
+}
+
+/* ------ Responsivity ------ */
+
+.mobile-menu-bars {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    #header-section {
+        position: relative;
+        overflow-x: clip;
+    }
+
+    .header-content-wrapper {
+        justify-content: space-between;
+    }
+
+    .mobile-menu-bars {
+        display: block;
+        margin-right: -20%;
+    }
+
+    .bar {
+        width: 30px;
+        height: 5px;
+        background-color: var(--fffWhite);
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    .header-nav {
+        display: block;
+        right: -100%;
+        pointer-events: none;
+        transition: 0.4s;
+        position: absolute;
+        bottom: -80%;
+        width: 25%;
+        background-color: var(--darkBlue);
+        z-index: 99999;
+        text-align: right;
+    }
+
+    .header-nav.active {
+        right: 0;
+        pointer-events: all;
+        transition: 0.4s;
+    }
 }

@@ -4,6 +4,19 @@ root.addEventListener("mousemove", (event) => {
     root.style.setProperty('--y', `${event.y}px`)
  }); */
 
+/* ------ Mobile menu ------ */
+
+function toggleMobileMenu() {
+    const hamburgerMenu = document.querySelector(".mobile-menu-bars");
+    const headerNav = document.querySelector(".header-nav");
+
+    hamburgerMenu.addEventListener("click", () => {
+        headerNav.classList.toggle("active");
+    });
+} 
+
+toggleMobileMenu();
+ 
 /* ------ About us ------ */
 
 function animateDash() {
