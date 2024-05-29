@@ -187,6 +187,10 @@ strong {
     align-items: center;
 }
 
+.header-logo-wrapper {
+    text-align: center;
+}
+
 .header-logo-link, .header-logo {
     max-width: 200px;
     max-height: 200px;
@@ -224,7 +228,7 @@ strong {
     left: 0;
     content: "";
     width: 100%;
-    height: 700px;
+    height: 70vh;
     background-image: linear-gradient(to bottom, rgb(24 41 67 / 60%), rgb(0 0 0 / 15%));
 }
 
@@ -234,7 +238,7 @@ strong {
 
 .custom-splide img {
     max-width: 100%;
-    max-height: 700px;
+    max-height: 70vh;
     width: 100%;
     object-fit: cover;
     object-position: 0% 40%;
@@ -855,7 +859,7 @@ strong {
     display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
     #header-section {
         position: relative;
         overflow-x: clip;
@@ -867,7 +871,6 @@ strong {
 
     .mobile-menu-bars {
         display: block;
-        margin-right: -20%;
     }
 
     .bar {
@@ -876,6 +879,10 @@ strong {
         background-color: var(--fffWhite);
         border-radius: 5px;
         margin: 5px 0;
+        position: relative;
+        transition: 0.4s;
+        left: 0;
+        top: 0;
     }
 
     .header-nav {
@@ -895,5 +902,66 @@ strong {
         right: 0;
         pointer-events: all;
         transition: 0.4s;
+    }
+
+    .mobile-menu-bars.active-x .bar:nth-child(1) {
+        left: 50px;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .mobile-menu-bars.active-x .bar:nth-child(2) {
+        transform: rotate(45deg);
+        transition: 0.4s;
+    }
+
+    .mobile-menu-bars.active-x .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -10px;
+        transition: 0.4s;
+    }
+
+    .footer-content-container {
+        flex-wrap: wrap;
+    }
+
+    .footer-block {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .introduction-img-wrapper {
+        height: 384px;
+    }
+
+    .introduction-img {
+        height: 410px;
+    }
+
+    .introduction-text {
+        min-height: 384px;
+    }
+
+    .header-nav-listitem-link {
+        font-size: 19px;
+    }
+
+    .is-active .custom-slide-text {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 805px) {
+    .introduction-img-wrapper {
+        max-width: 400px;
+    }
+
+    .contact-block {
+        max-width: 90%;
+        width: 100%;
     }
 }

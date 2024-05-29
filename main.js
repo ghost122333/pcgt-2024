@@ -12,12 +12,13 @@ function toggleMobileMenu() {
 
     hamburgerMenu.addEventListener("click", () => {
         headerNav.classList.toggle("active");
+        hamburgerMenu.classList.toggle("active-x");
     });
 } 
 
-/* 
+
 toggleMobileMenu();
-  */
+ 
 /* ------ About us ------ */
 
 function animateDash() {
